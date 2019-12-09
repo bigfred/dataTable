@@ -17,7 +17,7 @@ export class TestComponent implements OnInit {
   private userData = new BehaviorSubject(null);
 
 
-  login(credentials: { email: string, pw: string }): Observable<any> {
+  login(credentials: { email: string, pw: string }) {
     this.http.get('https://randomuser.me/api/').pipe(
       map(data => {
         this.userData.next(data);
